@@ -94,8 +94,8 @@ h1 {
   height: 30%;
 }
 
-.hero-content p {
-  font-size: 70px;
+.hero-content h2 {
+  font-size: 65px;
   font-weight: bold;
 }
 
@@ -119,20 +119,18 @@ h1 {
   padding: 5rem 0;
 }
 
-.card {
-  transition: transform 0.3s ease;
+.modal-content {
+  background-color: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 0 5px 0 rgba(111, 111, 111, 0.618);
+  text-align: left;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+#link-name {
+  font-size: 20px;
+  color: rgb(0, 128, 255);
 }
 
-#hero-text h1 {
-  font-size: 85px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#hero-text p {
-  font-size: 65px;
-  font-family: Arial, Helvetica, sans-serif;
+#link-name:hover {
+  color: rgb(0, 195, 255);
 }
