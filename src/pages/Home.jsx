@@ -21,7 +21,6 @@ const Home = () => {
     <div>
       <div className="hero-section" style={{
         backgroundImage: 'url("/images/hero-bg.jpg")',
-        backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
         width: '100%',
