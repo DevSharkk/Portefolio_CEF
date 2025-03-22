@@ -101,17 +101,23 @@ h1 {
 
 /* Styles personnalisés en plus de Bootstrap */
 .nav-link {
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #ffffff !important;
+  color: white !important;
 }
 
-/* Animation pour les liens actifs */
-.nav-link.active {
-  color: #ffffff !important;
+.active-link {
+  color: white !important;
+  text-decoration: underline !important;
+  font-weight: bold;
+}
+
+.active-brand {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Services section */
