@@ -17,19 +17,19 @@ const Footer = () => {
             <div className="social-icons">
               <a href="https://github.com/github-johndoe" 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow" 
                 className="me-3 text-secondary social-icon">
                 <FaGithub size={24} />
               </a>
               <a href="https://twitter.com/twitter-johndoe" 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow" 
                 className="me-3 text-secondary social-icon">
                 <FaTwitter size={24} />
               </a>
               <a href="https://linkedin.com/in/linkedin-johndoe" 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow" 
                 className="text-secondary social-icon">
                 <FaLinkedin size={24} />
               </a>

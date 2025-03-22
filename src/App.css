@@ -53,18 +53,8 @@ main {
 }
 
 /* Styles de base pour les pages */
-.home {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 
-.services, .portfolio, .contact, .legal-notice {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+
 
 h1 {
   color: #fff;
