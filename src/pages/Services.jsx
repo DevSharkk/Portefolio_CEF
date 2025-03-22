@@ -29,7 +29,7 @@ const Services = () => {
 
       <div className="container py-5">
         <div className="text-center mb-5">
-          <div className="d-inline-block my-3 py-3 px-5 border-4 border-bottom border-primary">
+          <div className="d-inline-block mb-3 pb-3 px-5 border-4 border-bottom border-primary">
             <h2 className="fw-bold fs-1">Mon offre de services</h2>
             <p>Voici les prestations sur lesquelles je peux intervenir</p>
           </div>
