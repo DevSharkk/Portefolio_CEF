@@ -134,3 +134,23 @@ h1 {
 #link-name:hover {
   color: rgb(0, 195, 255);
 }
+
+/* Style pour les icônes de réseaux sociaux */
+.social-icon {
+  transition: opacity 0.3s ease;
+  color: #616161 !important;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  color: #9e9e9e !important;
+}
+
+.footer-link {
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #cccccc !important;
+  text-decoration: none;
+}
