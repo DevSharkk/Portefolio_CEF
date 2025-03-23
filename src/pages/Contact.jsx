@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { BsMap, BsGeoAlt, BsPhone, BsEnvelopeAt } from 'react-icons/bs';
 
 const Contact = () => {
   const [validated, setValidated] = useState(false);
@@ -21,18 +21,18 @@ const Contact = () => {
 
   return (
     <div className="container py-5">
-      <div className="text-center mb-5">
+      <div className="text-center mb-4">
         <h2 className="fw-bold fs-1">Contact</h2>
         <p>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</p>
-        <hr className="mx-auto" style={{ width: '100px', height: '3px', backgroundColor: '#0d6efd' }} />
       </div>
+      <div className="mx-auto border-bottom border-5 border-primary w-25 mb-4"></div>
       
       <div className="card shadow border-0 rounded-3 overflow-hidden">
         <div className="card-body p-0">
           <div className="row g-0">
             {/* Formulaire de contact */}
             <div className="col-lg-6 p-4">
-              <h3 className="border-bottom border-4 border-primary mb-5 pb-3">Formulaire de contact</h3>
+              <h3 className="border-bottom border-4 border-primary mb-5 pb-3 fw-bold">Formulaire de contact</h3>
               
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formName">
@@ -83,7 +83,7 @@ const Contact = () => {
                   <Form.Control
                     required
                     as="textarea"
-                    rows={5}
+                    rows={13}
                     placeholder="Votre message"
                   />
                   <Form.Control.Feedback type="invalid">
@@ -91,7 +91,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
-                <div className="d-grid">
+                <div className="d-grid w-25 mx-auto">
                   <Button variant="primary" type="submit">
                     Envoyer
                   </Button>
@@ -101,24 +101,24 @@ const Contact = () => {
             
             {/* Coordonnées et carte */}
             <div className="col-lg-6 bg-light p-4">
-              <h3 className="border-bottom border-4 border-primary mb-5 pb-3">Mes coordonnées</h3>
+              <h3 className="border-bottom border-4 border-primary mb-5 pb-3 fw-bold">Mes coordonnées</h3>
               
               <div className="mb-4">
-                <h5 className="fw-bold">John Doe</h5>
+                <h4>John Doe</h4>
                 <p className="d-flex align-items-center mb-2">
-                  <FaMapMarkerAlt className="me-2" /> 
+                  <BsMap className="me-2" /> 
                   <span>40 rue Laure Diebold</span>
                   </p>
                   <p className="d-flex align-items-center mb-2">
-                  <FaMapMarkerAlt className="me-2" /> 
+                  <BsGeoAlt className="me-2" /> 
                   <span>69009 Lyon, France</span>
                 </p>
                 <p className="d-flex align-items-center mb-2">
-                  <FaPhone className="me-2" /> 
+                  <BsPhone className="me-2" /> 
                   <span>10 20 30 40 50</span>
                 </p>
                 <p className="d-flex align-items-center mb-4">
-                  <FaEnvelope className="me-2" /> 
+                  <BsEnvelopeAt className="me-2" /> 
                   <span>john.doe@gmail.com</span>
                 </p>
               </div>

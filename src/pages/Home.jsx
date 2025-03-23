@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import GitHubModal from '../components/GitHubModal';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  const githubData = {
-    name: "John Doe",
-    login: "github-johndoe",
-    avatar_url: "https://avatars.githubusercontent.com/u/1234567",
-    bio: "As we all know, John Doe's identity is unknown. I just wanted to contribute without being known.",
-    public_repos: 1,
-    followers: 16,
-    following: 0,
-    location: null,
-    blog: null,
-    html_url: "https://github.com/github-johndoe"
-  };
+  const [githubData, setGithubData] = useState(null);
+
+  useEffect(() => {
+    const fetchGithubData = async () => {
+      try {
+        const response = await fetch('https://api.github.com/users/github-john-doe');
+        const data = await response.json();
+        setGithubData(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données GitHub:', error);
+        // Fallback sur des données statiques en cas d'erreur
+        setGithubData({
+          name: "John Doe",
+          login: "github-john-doe",
+          avatar_url: "https://avatars.githubusercontent.com/u/19842736?v=4",
+          bio: "As we all know, John Doe's identity is unknown.\r\nI just wanted to contribute without being known.",
+          public_repos: 1,
+          followers: 17,
+          following: 0,
+          html_url: "https://github.com/github-john-doe"
+        });
+      }
+    };
+
+    fetchGithubData();
+  }, []);
 
   return (
     <div>
