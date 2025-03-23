@@ -31,7 +31,7 @@ const Home = () => {
         <div className="overlay"></div>
         <div className="hero-content text-white text-center">
           <h1>Bonjour, je suis John Doe</h1>
-          <p className="mb-4">Développeur web full stack</p>
+          <h2 className="mb-4">Développeur web full stack</h2>
           <Button 
             variant="danger" 
             size="lg" 
