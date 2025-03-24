@@ -1,12 +1,43 @@
-# React + Vite
+Portefolio réaliser avec REACT JS et BOOTSTRAP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Fonctionnalités
+- Navigation responsive avec menu burger en version mobile
+- Modale affichant les informations GitHub
+- Formulaire de contact avec validation
+- Galerie de projets réalisés
+- Présentation des services proposés
+- Informations légales complètes
+- Intégration de Google Maps
+-Utilisation des useState, useEffect
+-Utilisation des icons Bootstrap
 
-Currently, two official plugins are available:
+## Prérequis
+- Node.js (version 18 ou supérieure) - [Télécharger Node.js](https://nodejs.org/)
+- npm (version 9 ou supérieure, inclus avec Node.js)
+- Un navigateur web moderne (Chrome, Firefox, Edge, Safari)
+- Git pour cloner le dépôt (ou téléchargez-le directement)
+- 100 Mo d'espace disque libre minimum
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+1. Clonez le dépôt
+   git clone https://github.com/DevSharkk/Portefolio_CEF.git
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Installez les dépendances
+   npm install
+   Cette commande installera toutes les bibliothèques nécessaires définies dans le fichier package.json.
+
+3. Vérifiez que l'installation s'est bien déroulée
+   Assurez-vous qu'aucune erreur n'est apparue pendant l'installation. Si c'est le cas, vous pouvez essayer de résoudre les problèmes ou lancer `npm install --force`.
+
+## Lancement de l'application
+   Pour lancer l'application en mode développement :
+   npm run dev
+
+   Cette commande démarre le serveur de développement Vite.
+   L'application sera accessible à l'adresse [http://localhost:5173](http://localhost:5173) (ou un autre port si celui-ci est déjà utilisé).
+   Le serveur se rechargera automatiquement si vous modifiez les fichiers source.
+
+
+## Auteur
+Maxime LEVACHER (Portfolio CEF)

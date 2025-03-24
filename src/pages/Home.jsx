@@ -62,7 +62,7 @@ const Home = () => {
         justifyContent: 'center'
       }}>
         <div className="overlay position-absolute top-0 start-0 w-100 h-100 bg-white" 
-             style={{ opacity: 0.3 }}></div>
+            style={{ opacity: 0.3 }}></div>
         
         <div className="hero-content text-white text-center position-relative px-4 py-5">
           <h1 className="display-4 fw-bold mb-2">Bonjour, je suis John Doe</h1>
