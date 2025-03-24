@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import GitHubModal from '../components/GitHubModal';
+import { Helmet } from 'react-helmet';
+   
+// SEO
+<Helmet>
+  <title>John Doe - Développeur Web Full Stack</title>
+  <meta name="description" content="Développeur web spécialisé en React, JavaScript et PHP. Découvrez mon portfolio et mes services." />
+  <meta name="keywords" content="développeur web, portfolio, react, javascript" />
+</Helmet>
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -33,22 +41,26 @@ const Home = () => {
 
   return (
     <div>
-      <div className="hero-section" style={{
+      <div className="hero-section position-relative" style={{
         backgroundImage: 'url("/images/hero-bg.jpg")',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        minHeight: '100vh',
         width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
       }}>
-        <div className="overlay"></div>
-        <div className="hero-content text-white text-center">
-          <h1>Bonjour, je suis John Doe</h1>
-          <h2 className="mb-4">Développeur web full stack</h2>
+        <div className="overlay position-absolute top-0 start-0 w-100 h-100 bg-white" 
+             style={{ opacity: 0.3 }}></div>
+        
+        <div className="hero-content text-white text-center position-relative px-4 py-5">
+          <h1 className="display-4 fw-bold mb-2">Bonjour, je suis John Doe</h1>
+          <h2 className="fs-3 mb-4 mb-md-5">Développeur web full stack</h2>
           <Button 
             variant="danger" 
             size="lg" 
+            className="px-4 py-2"
             onClick={() => setShowModal(true)}
           >
             En savoir plus
@@ -56,7 +68,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container py-5 shadow-lg my-5 rounded-3">
+      <div className="container py-0 py-md-5 shadow-lg my-5 rounded-3">
         <div className="row">
           <div className="col-md-6">
             <h2 className="mb-5 pb-3 border-4 border-bottom border-primary fw-bold">A propos</h2>

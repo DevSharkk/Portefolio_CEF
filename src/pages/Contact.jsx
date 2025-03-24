@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { BsMap, BsGeoAlt, BsPhone, BsEnvelopeAt } from 'react-icons/bs';
+import { Helmet } from 'react-helmet';
+   
+// SEO
+<Helmet>
+  <title>John Doe - Développeur Web Full Stack</title>
+  <meta name="description" content="Développeur web spécialisé en React, JavaScript et PHP. Découvrez mon portfolio et mes services." />
+  <meta name="keywords" content="développeur web, portfolio, react, javascript" />
+</Helmet>
 
 const Contact = () => {
   const [validated, setValidated] = useState(false);
@@ -100,24 +108,24 @@ const Contact = () => {
             </div>
             
             {/* Coordonnées et carte */}
-            <div className="col-lg-6 bg-light p-4">
+            <div className="col-lg-6 bg-light p-4 pt-0 pt-lg-4">
               <h3 className="border-bottom border-4 border-primary mb-5 pb-3 fw-bold">Mes coordonnées</h3>
               
               <div className="mb-4">
                 <h4>John Doe</h4>
-                <p className="d-flex align-items-center mb-2">
+                <p className="d-flex align-items-center mb-0 mb-lg-2">
                   <BsMap className="me-2" /> 
                   <span>40 rue Laure Diebold</span>
                   </p>
-                  <p className="d-flex align-items-center mb-2">
+                  <p className="d-flex align-items-center mb-0 mb-lg-2">
                   <BsGeoAlt className="me-2" /> 
                   <span>69009 Lyon, France</span>
                 </p>
-                <p className="d-flex align-items-center mb-2">
+                <p className="d-flex align-items-center mb-0 mb-lg-2">
                   <BsPhone className="me-2" /> 
                   <span>10 20 30 40 50</span>
                 </p>
-                <p className="d-flex align-items-center mb-4">
+                <p className="d-flex align-items-center mb-0 mb-lg-2">
                   <BsEnvelopeAt className="me-2" /> 
                   <span>john.doe@gmail.com</span>
                 </p>
