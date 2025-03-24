@@ -10,10 +10,20 @@ import { Helmet } from 'react-helmet';
   <meta name="keywords" content="développeur web, portfolio, react, javascript" />
 </Helmet>
 
+/**
+ * Home Page Component
+ * Main landing page with hero section, about section, and skills section
+ */
 const Home = () => {
+  // State to control GitHub modal visibility
   const [showModal, setShowModal] = useState(false);
+  
+  // State to store GitHub profile data
   const [githubData, setGithubData] = useState(null);
 
+  /**
+   * Fetch GitHub profile data when component mounts
+   */
   useEffect(() => {
     const fetchGithubData = async () => {
       try {
@@ -21,8 +31,8 @@ const Home = () => {
         const data = await response.json();
         setGithubData(data);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données GitHub:', error);
-        // Fallback sur des données statiques en cas d'erreur
+        console.error('Error fetching GitHub data:', error);
+        // Fallback to static data if API call fails
         setGithubData({
           name: "John Doe",
           login: "github-john-doe",
@@ -56,7 +66,7 @@ const Home = () => {
         
         <div className="hero-content text-white text-center position-relative px-4 py-5">
           <h1 className="display-4 fw-bold mb-2">Bonjour, je suis John Doe</h1>
-          <h2 className="fs-3 mb-4 mb-md-5">Développeur web full stack</h2>
+          <h2 className="mb-4 mb-md-5">Développeur web full stack</h2>
           <Button 
             variant="danger" 
             size="lg" 
@@ -83,6 +93,7 @@ const Home = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime delectus, animi commodi ipsam error quo reprehenderit, asperiores praesentium eligendi minima quis alias hic, harum natus.</p>
           </div>
 
+          {/* Progress bar with Bootstrap */}
           <div className="col-md-6">
             <h2 className="mb-5 pb-3 border-4 border-bottom border-primary fw-bold">Mes compétences</h2>
             <div className="mb-2">
@@ -134,6 +145,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* GitHub modal */}
       <GitHubModal 
         show={showModal}
         handleClose={() => setShowModal(false)}

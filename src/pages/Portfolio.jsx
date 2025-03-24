@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioCard from '../components/PortfolioCard';
 import { Helmet } from 'react-helmet';
-   
+
 // SEO
 <Helmet>
   <title>John Doe - Développeur Web Full Stack</title>
@@ -9,7 +9,12 @@ import { Helmet } from 'react-helmet';
   <meta name="keywords" content="développeur web, portfolio, react, javascript" />
 </Helmet>
 
+/**
+ * Portfolio Page Component
+ * Displays a collection of projects in a responsive grid layout
+ */
 const Portfolio = () => {
+  // Array of portfolio projects with their details
   const projects = [
     {
       image: '/images/fresh-food.jpg',
@@ -51,11 +56,13 @@ const Portfolio = () => {
 
   return (
     <div>
+      {/* Header image for the portfolio page */}
       <div className="services-header">
         <img src="/images/banner.jpg" alt="image de fond pour les services" className="img-fluid w-100" />
       </div>
 
       <div className="container py-5">
+        {/* Page title and description */}
         <div className="text-center mb-5">
           <div className="d-inline-block mb-3 pb-3 px-5">
             <h2 className="fw-bold fs-1">Portefolio</h2>
@@ -73,6 +80,7 @@ const Portfolio = () => {
         <div className="row g-4">
           {projects.map((project, index) => (
             <div className="col-md-4 mb-4" key={index}>
+              {/* Using the PortfolioCard component for each project */}
               <PortfolioCard 
                 image={project.image}
                 title={project.title}

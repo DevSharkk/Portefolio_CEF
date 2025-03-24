@@ -10,7 +10,10 @@ import { Helmet } from 'react-helmet';
   <meta name="keywords" content="développeur web, portfolio, react, javascript" />
 </Helmet>
 
-
+/**
+ * Legal Notice Page Component
+ * Displays legal information about the website and its owner
+ */
 const LegalNotice = () => {
   return (
     <>
@@ -19,6 +22,7 @@ const LegalNotice = () => {
       </Helmet>
       
       <div className="container py-5">
+        {/* Page header */}
         <div className="text-center mb-4">
           <h2 className="fw-bold fs-1">Mentions légales</h2>
         </div>
@@ -26,7 +30,9 @@ const LegalNotice = () => {
 
         <div className="row justify-content-center">
           <div className="col-lg-12">
+            {/* Accordion for collapsible sections */}
             <Accordion defaultActiveKey="0" className="my-5">
+              {/* Site editor information section */}
               <Accordion.Item eventKey="0" className="border rounded">
                 <Accordion.Header>
                   <span>Editeur du site</span>
@@ -54,6 +60,7 @@ const LegalNotice = () => {
                 </Accordion.Body>
               </Accordion.Item>
 
+              {/* Hosting provider information section */}
               <Accordion.Item eventKey="1" className="border rounded">
                 <Accordion.Header>
                   <span>Hébergeur</span>
@@ -63,10 +70,10 @@ const LegalNotice = () => {
                   <p>91 rue du Faubourg Saint-Honoré, 75008 Paris</p>
                   <BsGlobe className="me-2" /> 
                   <a href="https://www.alwaysdata.com" target="_blank" rel="noopener noreferrer">www.alwaysdata.com</a>
-                  
                 </Accordion.Body>
               </Accordion.Item>
 
+              {/* Credits and acknowledgements section */}
               <Accordion.Item eventKey="2" className="border rounded">
                 <Accordion.Header>
                   <span>Crédits</span>

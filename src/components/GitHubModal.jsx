@@ -3,10 +3,12 @@ import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const GitHubModal = ({ show, handleClose, githubData }) => {
+  // If no GitHub data is provided, don't render anything
   if (!githubData) return null;
 
   return (
     <Modal show={show} onHide={handleClose} size="lg" centered>
+      {/* Modal header with title and close button */}
       <Modal.Header closeButton className="border-bottom border-secondary bg-dark text-white">
         <Modal.Title>Profil GitHub</Modal.Title>
         <style>
@@ -24,9 +26,11 @@ const GitHubModal = ({ show, handleClose, githubData }) => {
           `}
         </style>
       </Modal.Header>
+
+      {/* Modal body containing user profile information */}
       <Modal.Body className="bg-dark text-white">
         <div className="d-flex flex-column flex-md-row">
-          {/* Image à gauche (plus petite sur tablette) */}
+          {/* Left column: User avatar */}
           <div className="me-md-3 text-center text-md-start" style={{ flex: '0 0 auto' }}>
             <img 
               src="https://avatars.githubusercontent.com/u/19842736?v=4"
@@ -35,16 +39,17 @@ const GitHubModal = ({ show, handleClose, githubData }) => {
               className="mx-auto"
             />
           </div>
-          {/* Contenu à droite */}
+
+          {/* Right column: User information */}
           <div style={{ flex: 1}} className="px-2 px-md-3 mt-3 mt-md-0">
             <div className="border-bottom border-secondary py-2 px-3">
-            <i class="bi bi-person" style={{ paddingRight: '10px' }}></i>
+              <i class="bi bi-person" style={{ paddingRight: '10px' }}></i>
               <a href="https://github.com/github-john-doe" id="link-name" target="_blank" rel="noopener noreferrer">
                 {githubData.name}
               </a>
             </div>
             <div className="border-bottom border-secondary py-2 px-3">
-            <i class="bi bi-geo-alt"></i>
+              <i class="bi bi-geo-alt"></i>
             </div>
 
             <div className="py-2 border-bottom border-secondary">
@@ -87,6 +92,8 @@ const GitHubModal = ({ show, handleClose, githubData }) => {
           </div>
         </div>
       </Modal.Body>
+
+      {/* Modal footer with close button */}
       <Modal.Footer className="border-top border-secondary bg-dark">
         <Button variant="secondary" onClick={handleClose}>
           Fermer

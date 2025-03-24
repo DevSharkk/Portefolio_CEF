@@ -10,7 +10,12 @@ import { Helmet } from 'react-helmet';
   <meta name="keywords" content="développeur web, portfolio, react, javascript" />
 </Helmet>
 
+/**
+ * Services Page Component
+ * Displays the different services offered, using the ServiceCard component
+ */
 const Services = () => {
+  // Array of services with their details
   const services = [
     {
       icon: <BsBrush />,
@@ -31,11 +36,13 @@ const Services = () => {
 
   return (
     <div>
+      {/* Header image for the services page */}
       <div className="services-header">
         <img src="/images/banner.jpg" alt="image de fond pour les services" className="img-fluid w-100" />
       </div>
 
       <div className="container py-5">
+        {/* Page title and description with underline */}
         <div className="text-center mb-5">
           <div className="d-inline-block mb-3 pb-3 px-5">
             <h2 className="fw-bold fs-1">Mon offre de services</h2>
@@ -48,9 +55,11 @@ const Services = () => {
           </div>
         </div>
         
+        {/* Services grid - displays services in a responsive layout */}
         <div className="row g-4">
           {services.map((service, index) => (
             <div className="col-md-4" key={index}>
+              {/* Using the ServiceCard component for each service */}
               <ServiceCard 
                 icon={service.icon}
                 title={service.title}

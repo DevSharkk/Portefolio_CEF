@@ -8,6 +8,14 @@ import Contact from './pages/Contact';
 import LegalNotice from './pages/LegalNotice';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Helmet } from 'react-helmet';
+
+// SEO
+<Helmet>
+  <title>John Doe - Développeur Web Full Stack</title>
+  <meta name="description" content="Développeur web spécialisé en React, JavaScript et PHP. Découvrez mon portfolio et mes services." />
+  <meta name="keywords" content="développeur web, portfolio, react, javascript" />
+</Helmet>
 
 function App() {
   return (

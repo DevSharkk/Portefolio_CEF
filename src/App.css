@@ -52,19 +52,7 @@ main {
   text-decoration: underline;
 }
 
-/* Styles de base pour les pages */
 
-
-
-h1 {
-  color: #fff;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 80px;
-  font-weight: bold;
-}
-
-/* Hero Section */
 .hero-section {
   position: relative;
 }
@@ -84,12 +72,16 @@ h1 {
   height: 30%;
 }
 
+.hero-content h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
 .hero-content h2 {
-  font-size: 65px;
+  font-size: 60px;
   font-weight: bold;
 }
 
-/* Styles personnalisés en plus de Bootstrap */
+
 .nav-link {
   color: rgba(255, 255, 255, 0.7) !important;
   transition: all 0.3s ease;
@@ -108,7 +100,7 @@ h1 {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Services section */
+
 .services-section {
   padding: 5rem 0;
 }
@@ -129,7 +121,7 @@ h1 {
   color: rgb(0, 195, 255);
 }
 
-/* Style pour les icônes de réseaux sociaux */
+
 .social-icon {
   transition: opacity 0.3s ease;
   color: #616161 !important;
