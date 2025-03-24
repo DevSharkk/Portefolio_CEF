@@ -14,21 +14,29 @@ const GitHubModal = ({ show, handleClose, githubData }) => {
             .modal-header .btn-close {
               filter: invert(1) grayscale(100%) brightness(200%);
             }
+            
+            @media (max-width: 991px) {
+              .modal-dialog {
+                max-width: 90%;
+                margin: 1rem auto;
+              }
+            }
           `}
         </style>
       </Modal.Header>
       <Modal.Body className="bg-dark text-white">
-        <div className="d-flex">
-          {/* Image à gauche */}
-          <div className="me-4" style={{ flex: '0 0 250px' }}>
+        <div className="d-flex flex-column flex-md-row">
+          {/* Image à gauche (plus petite sur tablette) */}
+          <div className="me-md-3 text-center text-md-start" style={{ flex: '0 0 auto' }}>
             <img 
               src="https://avatars.githubusercontent.com/u/19842736?v=4"
               alt="Avatar GitHub" 
-              style={{ width: '350px', height: '350px', padding: '15px' }}
+              style={{ width: '200px', height: '200px', padding: '10px' }}
+              className="mx-auto"
             />
           </div>
           {/* Contenu à droite */}
-          <div style={{ flex: 1}} className="px-4 mt-4">
+          <div style={{ flex: 1}} className="px-2 px-md-3 mt-3 mt-md-0">
             <div className="border-bottom border-secondary py-2 px-3">
             <i class="bi bi-person" style={{ paddingRight: '10px' }}></i>
               <a href="https://github.com/github-john-doe" id="link-name" target="_blank" rel="noopener noreferrer">

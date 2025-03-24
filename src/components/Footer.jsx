@@ -14,7 +14,7 @@ const Footer = () => {
             <p className="mb-1">10 20 30 40 50</p>
             <p className="mb-3">john.doe@gmail.com</p>
             
-            <div className="social-icons">
+            <div className="social-icons mb-3 mb-lg-0">
               <a href="https://github.com/github-johndoe" 
                 target="_blank" 
                 rel="noopener noreferrer nofollow" 
@@ -38,22 +38,22 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>Liens utiles</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><Link to="/" className="text-white text-decoration-none footer-link">Accueil</Link></li>
-              <li className="mb-2"><Link to="/services" className="text-white text-decoration-none footer-link">Services</Link></li>
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Portfolio</Link></li>
-              <li className="mb-2"><Link to="/contact" className="text-white text-decoration-none footer-link">Me contacter</Link></li>
-              <li><Link to="/mentions-legales" className="text-white text-decoration-none footer-link">Mentions légales</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/" className="text-white text-decoration-none footer-link">Accueil</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/services" className="text-white text-decoration-none footer-link">Services</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Portfolio</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/contact" className="text-white text-decoration-none footer-link">Me contacter</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/mentions-legales" className="text-white text-decoration-none footer-link">Mentions légales</Link></li>
             </ul>
           </div>
           <div className="col-md-4">
             <h5>Mes dernières réalisations</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Fresh Food</Link></li>
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Restaurant Akira</Link></li>
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Espace bien-être</Link></li>
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">SEO</Link></li>
-              <li className="mb-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Création d'une API</Link></li>
-              <li><Link to="/realisations" className="text-white text-decoration-none footer-link">Maquette d'un site</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Fresh Food</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Restaurant Akira</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Espace bien-être</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">SEO</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Création d'une API</Link></li>
+              <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Maquette d'un site</Link></li>
             </ul>
           </div>
         </div>

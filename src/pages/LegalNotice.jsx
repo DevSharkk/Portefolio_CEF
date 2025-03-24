@@ -1,7 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Accordion } from 'react-bootstrap';
 import { BsMap, BsGeoAlt, BsPhone, BsEnvelopeAt, BsGlobe } from 'react-icons/bs';
+import { Helmet } from 'react-helmet';
+   
+// SEO
+<Helmet>
+  <title>John Doe - Développeur Web Full Stack</title>
+  <meta name="description" content="Développeur web spécialisé en React, JavaScript et PHP. Découvrez mon portfolio et mes services." />
+  <meta name="keywords" content="développeur web, portfolio, react, javascript" />
+</Helmet>
 
 
 const LegalNotice = () => {
@@ -15,7 +22,7 @@ const LegalNotice = () => {
         <div className="text-center mb-4">
           <h2 className="fw-bold fs-1">Mentions légales</h2>
         </div>
-        <div className="mx-auto border-bottom border-5 border-primary w-50 mb-4"></div>
+        <div className="mx-auto border-bottom border-5 border-primary w-25 w-lg-50 mb-4"></div>
 
         <div className="row justify-content-center">
           <div className="col-lg-12">
@@ -27,19 +34,19 @@ const LegalNotice = () => {
                 <Accordion.Body>
                 <div className="mb-4">
                   <h4 className="px-2">John Doe</h4>
-                  <p className="d-flex align-items-center mb-2">
+                  <p className="d-flex align-items-center mb-0 mb-lg-2">
                     <BsMap className="me-2" /> 
                     <span>40 rue Laure Diebold</span>
                     </p>
-                    <p className="d-flex align-items-center mb-2">
+                    <p className="d-flex align-items-center mb-0 mb-lg-2">
                     <BsGeoAlt className="me-2" /> 
                     <span>69009 Lyon, France</span>
                   </p>
-                  <p className="d-flex align-items-center mb-2">
+                  <p className="d-flex align-items-center mb-0 mb-lg-2">
                     <BsPhone className="me-2" /> 
                     <span>10 20 30 40 50</span>
                   </p>
-                  <p className="d-flex align-items-center mb-4">
+                  <p className="d-flex align-items-center mb-0 mb-lg-2">
                     <BsEnvelopeAt className="me-2" /> 
                     <span>john.doe@gmail.com</span>
                   </p>

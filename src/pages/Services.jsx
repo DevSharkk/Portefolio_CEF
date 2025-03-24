@@ -1,6 +1,14 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { BsSearch, BsCodeSlash, BsBrush } from 'react-icons/bs';
+import { Helmet } from 'react-helmet';
+   
+// SEO
+<Helmet>
+  <title>John Doe - Développeur Web Full Stack</title>
+  <meta name="description" content="Développeur web spécialisé en React, JavaScript et PHP. Découvrez mon portfolio et mes services." />
+  <meta name="keywords" content="développeur web, portfolio, react, javascript" />
+</Helmet>
 
 const Services = () => {
   const services = [
@@ -29,9 +37,14 @@ const Services = () => {
 
       <div className="container py-5">
         <div className="text-center mb-5">
-          <div className="d-inline-block mb-3 pb-3 px-5 border-4 border-bottom border-primary">
+          <div className="d-inline-block mb-3 pb-3 px-5">
             <h2 className="fw-bold fs-1">Mon offre de services</h2>
             <p>Voici les prestations sur lesquelles je peux intervenir</p>
+            <div className="row justify-content-center my-4">
+              <div className="col-6 col-lg-12">
+                <div className="border-bottom border-5 border-primary"></div>
+              </div>
+            </div>
           </div>
         </div>
         
