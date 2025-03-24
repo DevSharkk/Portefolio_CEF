@@ -10,6 +10,10 @@ import { Helmet } from 'react-helmet';
   <meta name="keywords" content="développeur web, portfolio, react, javascript" />
 </Helmet>
 
+/**
+ * Contact Page Component
+ * Displays a contact form and contact information with Google Maps
+ */
 const Contact = () => {
   const [validated, setValidated] = useState(false);
 
@@ -17,11 +21,12 @@ const Contact = () => {
     const form = event.currentTarget;
     event.preventDefault();
     
+    // Check if form is valid
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-      // Traitement du formulaire ici
-      alert('Formulaire envoyé !');
+      // Form processing logic would go here
+      alert('Form has been submitted!');
     }
     
     setValidated(true);
@@ -29,20 +34,23 @@ const Contact = () => {
 
   return (
     <div className="container py-5">
+      {/* Page header */}
       <div className="text-center mb-4">
         <h2 className="fw-bold fs-1">Contact</h2>
         <p>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</p>
       </div>
       <div className="mx-auto border-bottom border-5 border-primary w-25 mb-4"></div>
       
+      {/* Main content card with form and contact info */}
       <div className="card shadow border-0 rounded-3 overflow-hidden">
         <div className="card-body p-0">
           <div className="row g-0">
-            {/* Formulaire de contact */}
-            <div className="col-lg-6 p-4">
+            {/* Left column: Contact form */}
+            <div className="col-lg-6 p-4 mb-4 mb-lg-0">
               <h3 className="border-bottom border-4 border-primary mb-5 pb-3 fw-bold">Formulaire de contact</h3>
               
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                {/* Name field */}
                 <Form.Group className="mb-3" controlId="formName">
                   <Form.Control
                     required
@@ -54,6 +62,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
+                {/* Email field */}
                 <Form.Group className="mb-3" controlId="formEmail">
                   <Form.Control
                     required
@@ -65,6 +74,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
+                {/* Phone field */}
                 <Form.Group className="mb-3" controlId="formPhone">
                   <Form.Control
                     required
@@ -76,6 +86,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
+                {/* Subject field */}
                 <Form.Group className="mb-3" controlId="formSubject">
                   <Form.Control
                     required
@@ -87,6 +98,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
+                {/* Message field */}
                 <Form.Group className="mb-3" controlId="formMessage">
                   <Form.Control
                     required
@@ -99,6 +111,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 
+                {/* Submit button */}
                 <div className="d-grid w-25 mx-auto">
                   <Button variant="primary" type="submit">
                     Envoyer
@@ -107,10 +120,11 @@ const Contact = () => {
               </Form>
             </div>
             
-            {/* Coordonnées et carte */}
-            <div className="col-lg-6 bg-light p-4 pt-0 pt-lg-4">
+            {/* Right column: Contact info and Google Maps */}
+            <div className="col-lg-6 bg-light p-4">
               <h3 className="border-bottom border-4 border-primary mb-5 pb-3 fw-bold">Mes coordonnées</h3>
               
+              {/* Contact details with icons */}
               <div className="mb-4">
                 <h4>John Doe</h4>
                 <p className="d-flex align-items-center mb-0 mb-lg-2">
@@ -131,7 +145,7 @@ const Contact = () => {
                 </p>
               </div>
               
-              {/* Google Map */}
+              {/* Google Maps embed */}
               <div className="ratio ratio-4x3">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6273285551316!2d4.798727776775207!3d45.77866371224245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65edac5b3f%3A0xe01c5701fd042356!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1689876543210!5m2!1sfr!2sfr"
@@ -139,7 +153,7 @@ const Contact = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Google Maps"
+                  title="Google Maps Location"
                 ></iframe>
               </div>
             </div>

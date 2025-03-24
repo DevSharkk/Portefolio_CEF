@@ -2,11 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
+/**
+ * Footer Component
+ * Displays the site footer with contact information, navigation links, and social media icons
+ */
 const Footer = () => {
   return (
     <footer className="bg-dark text-white py-4">
       <div className="container">
         <div className="row">
+          {/* First column: Contact information and social media */}
           <div className="col-md-4">
             <h5>John Doe</h5>
             <p className="mb-1">40 rue Léon Deladot</p>
@@ -14,6 +19,7 @@ const Footer = () => {
             <p className="mb-1">10 20 30 40 50</p>
             <p className="mb-3">john.doe@gmail.com</p>
             
+            {/* Social media icons with links */}
             <div className="social-icons mb-3 mb-lg-0">
               <a href="https://github.com/github-johndoe" 
                 target="_blank" 
@@ -35,6 +41,8 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
+          {/* Second column: Site navigation links */}
           <div className="col-md-4">
             <h5>Liens utiles</h5>
             <ul className="list-unstyled">
@@ -45,9 +53,12 @@ const Footer = () => {
               <li className="mb-0 mb-lg-2"><Link to="/mentions-legales" className="text-white text-decoration-none footer-link">Mentions légales</Link></li>
             </ul>
           </div>
+
+          {/* Third column: Recent projects links */}
           <div className="col-md-4">
             <h5>Mes dernières réalisations</h5>
             <ul className="list-unstyled">
+              {/* All project links redirect to the portfolio page */}
               <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Fresh Food</Link></li>
               <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Restaurant Akira</Link></li>
               <li className="mb-0 mb-lg-2"><Link to="/realisations" className="text-white text-decoration-none footer-link">Espace bien-être</Link></li>

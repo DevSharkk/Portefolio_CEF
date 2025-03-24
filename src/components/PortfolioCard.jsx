@@ -8,8 +8,12 @@ const PortfolioCard = ({ image, title, description, technology }) => {
       <div className="card-body text-center">
         <h4 className="card-title fw-bold">{title}</h4>
         <p className="card-text">{description}</p>
-        <Button variant="primary" size="md">Voir le site</Button>
+        
+        {/* Button to view the project */}
+        <Button variant="primary" size="sm">Voir le site</Button>
       </div>
+      
+      {/* Card footer showing technologies used */}
       <div className="card-footer bg-light text-center text-muted">
         {technology}
       </div>
